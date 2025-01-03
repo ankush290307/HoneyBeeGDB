@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HoneyGDB Poster</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom Navbar Styles */
+        .navbar-nav {
+            margin: 0 auto;
+        }
+        .gradient-nav {
+            background-color: #E6A400;
+        }
+        .dropdown-submenu {
+            position: relative;
+        }
+        .submenu {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+        }
+        .dropdown-submenu:hover .submenu {
+            display: block;
+        }
+        html body nav.navbar {
+            position: sticky !important;
+            top: 0 !important;
+            z-index: 10000 !important; /* High value to ensure it's on top */
+            background-color: #E6A400 !important; /* Preserving the original color */
+        }
+        /* Poster Styles */
+        .poster {
+            padding: 50px;
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            font-family: 'Arial, sans-serif';
+        }
+        .poster-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .poster-header h1 {
+            font-size: 3em;
+            color: #333;
+        }
+        .poster-header h3 {
+            font-size: 1.5em;
+            color: #555;
+        }
+        .section-title {
+            color: #E6A400;
+            border-bottom: 2px solid #E6A400;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        .content-section {
+            text-align: justify;
+            color: #444;
+        }
+        .references {
+            margin-top: 40px;
+        }
+        .reference-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        /* Responsive SVG */
+        .poster-svg {
+            width: 100%;
+            height: auto;
+            margin-bottom: 30px;
+        }
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #E6A400;
+            color: white;
+        }
+        /* Footer Styles */
+        footer {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg gradient-nav">
+        <a class="navbar-brand text-white" href="#">HoneyGDB</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style="color:white;"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="#">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" 
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Features
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Genome Data</a></li>
+                        <li><a class="dropdown-item" href="#">Transcriptomics</a></li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">Proteomics</a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Protein Atlas</a></li>
+                                <li><a class="dropdown-item" href="#">Interaction Networks</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Variome</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="resourcesDropdown" role="button" 
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Resources
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
+                        <li><a class="dropdown-item" href="#">Community</a></li>
+                        <li><a class="dropdown-item" href="#">Downloads</a></li>
+                        <li><a class="dropdown-item" href="#">Documentation</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Poster Content -->
+    <div class="poster container-fluid">
+        <!-- Poster Header -->
+        <div class="poster-header">
+            <h1>HoneyGDB: A Comprehensive Genomic and Omics Database for Apis Species</h1>
+            <h3>Enhancing Research on Honeybee Health and Varroa Resistance</h3>
+            <p><strong>Authors:</strong> Ankush Sharma<sup>1,3</sup>, Lewis James Bartlett<sup>2</sup>, Jessica Kissinger<sup>3,4,5</sup>, Andrew H Paterson<sup>1,3,4</sup></p>
+            <p><strong>Affiliations:</strong></p>
+            <ul class="list-unstyled">
+                <li>1. Plant Genome Mapping Laboratory, University of Georgia, Athens, GA, 30602, USA</li>
+                <li>2. Center for the Ecology of Infectious Diseases, University of Georgia, Athens GA 30606</li>
+                <li>3. Institute of Bioinformatics, University of Georgia, Athens, GA, 30602, USA</li>
+                <li>4. Center for Tropical and Emerging Global Diseases, University of Georgia, Athens, GA, 30602, USA</li>
+                <li>5. Department of Genetics, University of Georgia, Athens, GA, 30602, USA</li>
+            </ul>
+        </div>
+
+        <!-- SVG Poster Image -->
+        <div class="text-center">
+            <img src="HoneyGDB.svg" alt="HoneyGDB Poster" class="poster-svg">
+        </div>
+
+        <!-- Abstract Section -->
+        <div class="content-section">
+            <h2 class="section-title">Abstract</h2>
+            <p>Honeybees (Apis species) are critical to global agriculture and ecosystem stability, providing essential pollination services and producing honey and beeswax. This article introduces <strong>HoneyGDB</strong> (<a href="http://chibba.agtec.uga.edu/HoneyGDB">http://chibba.agtec.uga.edu/HoneyGDB</a>), a web-based platform designed to integrate and analyze multi-omics data, including genomic, transcriptomic, and proteomic datasets, across Apis species. HoneyGDB offers an accessible, user-friendly interface that addresses limitations in existing databases, enabling comprehensive exploration of key molecular and genetic insights. This resource supports research into honeybee health and Varroa mite resistance, providing a foundation for advancements in sustainable agriculture, improved pollination practices, and conservation efforts. HoneyGDB is poised to make a significant contribution to the global scientific community’s efforts to better understand and protect honeybees.</p>
+        </div>
+
+        <!-- Introduction Section -->
+        <div class="content-section">
+            <h2 class="section-title">Introduction</h2>
+            <p>Honeybees (Apis species) are vital to both global agriculture and ecosystems, serving as key pollinators and producers of honey and beeswax. As genome sequencing technologies have advanced and costs have decreased, large-scale genomic datasets have become more readily available for honeybee research. This increase in available data has highlighted the need for a dedicated platform to support multi-omics research across Apis species. To address this need, we introduce the <strong>Honeybee Genome Database (HoneyGDB)</strong>, a comprehensive web-based platform accessible at <a href="http://chibba.agtec.uga.edu/HoneyGDB">http://chibba.agtec.uga.edu/HoneyGDB</a>. HoneyGDB integrates and analyzes multi-omics data for all major Apis species, including <em>Apis mellifera</em>, <em>Apis cerana</em>, <em>Apis dorsata</em>, <em>Apis florea</em>, and the recently sequenced <em>Apis laboriosa</em>.</p>
+            <p>The increasing accessibility of genome sequencing projects, once limited to large collaborations, is now often driven by individual labs and smaller research groups. HoneyGDB democratizes access to these datasets by offering a user-friendly platform that facilitates the detailed exploration of genomic, proteomic, and transcriptomic data. This platform enables a holistic investigation into honeybee biology, including their behavior, social structures, and ecological roles.</p>
+            <p>Despite the recognized importance of making genomic data publicly available, many researchers, especially those in wet-lab settings or in the beekeeping community, lack the bioinformatics expertise or computational resources needed to utilize large multi-omics datasets effectively. HoneyGDB addresses this barrier by simplifying data access and analysis, thereby broadening the scope of researchers and practitioners who can engage in honeybee genomics research.</p>
+            <p>Existing resources, such as BeeBase (part of the Hymenoptera Genome Database) and the Honeybee Proteome Atlas, have made significant contributions to honeybee research but often fall short in providing fully integrated multi-omics data. BeeBase, for instance, offers genome data via InterMine and JBrowse but lacks the comprehensive omics integration that is critical for in-depth studies of Apis species. HoneyGDB fills this gap by integrating data from well-established sources such as NCBI RefSeq, Gene Ontology, UniProt, KEGG, and InterPro, enabling detailed gene annotations, comparative analyses of gene functions and protein characteristics, and insights into evolutionary dynamics.</p>
+            <p>Additionally, HoneyGDB supports research into critical agricultural challenges, including colony collapse disorder and Varroa mite resistance, by providing data on disease resistance, stress responses, and honeybee health. The platform includes powerful tools such as JBrowse2 for genome browsing, a standalone BLAST server, and the Beehub portal, which enhances data mining and exploration capabilities.</p>
+            <p>In summary, HoneyGDB is more than a genomic repository; it is an innovative platform that integrates multi-omics datasets to enable deep analysis of honeybee biology. The platform provides novel insights into honeybee evolutionary biology, social behavior, and ecological impact, positioning itself as an indispensable resource for researchers. As HoneyGDB continues to evolve, it will play a pivotal role in global efforts to better understand and conserve honeybees, driving advances in sustainable agriculture, pollination strategies, and conservation efforts. The development of this integrated omics framework promises to revolutionize the study and conservation of Apis species, ultimately benefiting both honeybees and the ecosystems they support.</p>
+        </div>
+
+        <!-- Materials and Methods Section -->
+        <div class="content-section">
+            <h2 class="section-title">Materials and Methods</h2>
+
+            <h4>Genome Data and Gene Models</h4>
+            <p>HoneyGDB hosts extensive genomic data, including genome assemblies and official gene sets for various honeybee species, curated by genome consortiums. These datasets feature valuable annotations from sources like NCBI RefSeq, Gene Ontology, UniProt, and InterPro, providing insights into gene functions, protein attributes, and domain assignments. The database offers cross-references for <em>A. mellifera</em> genes from NCBI, while for other species, cross-references are computed using IntersectBed, ensuring accurate identification of overlapping gene predictions. Each gene is annotated using various pipelines along with the gene models. Gene aliases in HoneyGDB include identifiers from the original gene prediction pipeline by MAKER, different versions of gene set identifiers for <em>A. mellifera</em> like OGSv3.2 and OGSv1.0, NCBI identifiers, Beebase crosslinks, and HoneyGDB gene identifiers. This approach ensures organized and accessible data for researchers.</p>
+
+            <!-- Table 2.1 Genomes of Apis Mellifera -->
+            <h5>Table 2.1: Genomes of Apis Mellifera</h5>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Organism Name</th>
+                        <th>Assembly Accession</th>
+                        <th>Assembly Name</th>
+                        <th>Assembly Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Apis cerana</td>
+                        <td>GCA_029169275.1</td>
+                        <td>AcerK_1.0</td>
+                        <td>Chromosome</td>
+                    </tr>
+                    <tr>
+                        <td>Apis cerana</td>
+                        <td>GCA_039655025.1</td>
+                        <td>ASM3965502v1</td>
+                        <td>Chromosome</td>
+                    </tr>
+                    <tr>
+                        <td>Apis cerana</td>
+                        <td>GCA_020141525.2</td>
+                        <td>ASM2014152v2</td>
+                        <td>Chromosome</td>
+                    </tr>
+                    <tr>
+                        <td>Apis cerana</td>
+                        <td>GCA_029531695.1</td>
+                        <td>ASM2953169v1</td>
+                        <td>Chromosome</td>
+                    </tr>
+                    <tr>
+                        <td>Apis cerana</td>
+                        <td>GCA_019250055.1</td>
+                        <td>ASM1925005v1</td>
+                        <td>Scaffold</td>
+                    </tr>
+                    <tr>
+                        <td>Apis cerana</td>
+                        <td>GCA_001442555.1</td>
+                        <td>ACSNU-2.0</td>
+                        <td>Scaffold</td>
+                    </tr>
+                    <tr>
+                        <td>Apis cerana cerana</td>
+                        <td>GCA_011100585.1</td>
+                        <td>ASM1110058v1</td>
+                        <td>Chromosome</td>
+                    </tr>
+                    <tr>
+                        <td>Apis cerana cerana</td>
+                        <td>GCA_002290385.1</td>
+                        <td>ApisCC1.0</td>
+                        <td>Scaffold</td>
+                    </tr>
+                    <tr>
+                        <td>Apis cerana japonica</td>
+                        <td>GCA_033238705.1</td>
+                        <td>ASM3323870v1</td>
+                        <td>Scaffold</td>
+                    </tr>
+                    <tr>
+                        <td>Apis cerana japonica</td>
+                        <td>GCA_002217905.1</td>
+                        <td>Apiscer_1.0</td>
+                        <td>Scaffold</td>
+                    </tr>
+                    <tr>
+                        <td>Apis dorsata</td>
+                        <td>GCA_000469605.1</td>
+                        <td>Apis dorsata 1.3</td>
+                        <td>Scaffold</td>
+                    </tr>
+                    <tr>
+                        <td>Apis dorsata</td>
+                        <td>GCA_009792835.1</td>
+                        <td>RUTG_Adors_1.0</td>
+                        <td>Scaffold</td>
+                    </tr>
+                    <tr>
+                        <td>Apis florea</td>
+                        <td>GCA_000184785.2</td>
+                        <td>Aflo_1.1</td>
+                        <td>Scaffold</td>
+                    </tr>
+                    <tr>
+                        <td>Apis laboriosa</td>
+                        <td>GCA_014066325.1</td>
+                        <td>ASM1406632v1</td>
+                        <td>Scaffold</td>
+                    </tr>
+                    <tr>
+                        <td>Apis mellifera</td>
+                        <td>GCA_003254395.2</td>
+                        <td>Amel_HAv3.1</td>
+                        <td>Chromosome</td>
+                    </tr>
+                    <tr>
+                        <td>Apis mellifera</td>
+                        <td>GCA_000002195.1</td>
+                        <td>Amel_4.5</td>
+                        <td>Chromosome</td>
+                    </tr>
+                    <tr>
+                        <td>Apis mellifera carnica</td>
+                        <td>GCA_013841245.2</td>
+                        <td>ASM1384124v2</td>
+                        <td>Chromosome</td>
+                    </tr>
+                    <tr>
+                        <td>Apis mellifera caucasica</td>
+                        <td>GCA_013841205.1</td>
+                        <td>ASM1384120v1</td>
+                        <td>Contig</td>
+                    </tr>
+                    <tr>
+                        <td>Apis mellifera intermissa</td>
+                        <td>GCA_000819425.1</td>
+                        <td>Ami_v1</td>
+                        <td>Scaffold</td>
+                    </tr>
+                    <tr>
+                        <td>Apis mellifera ligustica</td>
+                        <td>GCA_019321825.1</td>
+                        <td>ASM1932182v1</td>
+                        <td>Chromosome</td>
+                    </tr>
+                    <tr>
+                        <td>Apis mellifera mellifera</td>
+                        <td>GCA_003314205.2</td>
+                        <td>INRA_AMelMel_1.1</td>
+                        <td>Chromosome</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4>Transcriptome and Gene Expression Data</h4>
+            <p>HoneyGDB incorporates RNAseq data from the NCBI Sequence Read Archive (SRA) (<a href="https://www.ncbi.nlm.nih.gov/sra">nih.gov</a>), providing users with resources to explore gene expression patterns. We selected mRNA sequence data sets with 100 bp reads from the Illumina platform for all Apis species. To ensure data quality, we downloaded FASTQ files for X paired-end read runs and X single-end runs. After adapter trimming and quality control using <em>Trimmomatic</em>, the processed reads were aligned to the genomes using <em>HISAT2</em>. To quantify gene expression levels, we calculated FPKM (Fragments Per Kilobase of transcript per Million mapped reads) and normalized read counts for each dataset, based on the genome's transcript annotations. <em>StringTie</em> package were used for this analysis. Additionally, we used <em>BedTools</em> to determine raw read counts per transcript and computed RPKM (Reads Per Kilobase of transcript per Million mapped reads).</p>
+
+            <h4>Variome and Diversity</h4>
+            <p>We downloaded a total of _______ Apis accessions from NCBI SRA (Table S7) and aligned them to the reference genome version of respective Apis species. SNPs were called using <em>Freebayes</em> with default parameters. The resulting variants were then annotated using <em>SNPeff</em>, based on the RefSeq gene annotation set. This workflow allowed us to capture a comprehensive set of genetic variations, providing insights into population structure, adaptation, and potential markers for traits such as Varroa mite resistance. The detailed variant data can be accessed for further analysis and is a crucial resource for ongoing genomic studies in honeybees.</p>
+
+            <h4>Proteomics Data Integration</h4>
+            <p>We integrated data from the <em>HoneyBee Protein Atlas</em> into HoneyGDB by creating hyperlinks using gene identifiers. These hyperlinks provide seamless access to detailed proteomic information for honeybee castes and tissue types, including protein sequences, functional annotations, and molecular characteristics for specific genes. This integration enhances HoneyGDB's scope, enabling researchers to gain a comprehensive understanding of honeybee proteomics, including valuable metadata on experimental conditions and protein expression levels.</p>
+
+            <h4>Functional Annotation</h4>
+            <p>We utilized the gene models as outlined in the original publications for each genome and then re-annotated all of them. To identify protein domains, we compared the protein sequences against the InterPro database using <em>InterProScan</em> with default parameters, identifying InterPro and Pfam domains, as well as gene ontology terms. KEGG orthology was determined through the <em>KAAS</em> web server. Additionally, all genes, excluding those from <em>Apis mellifera</em>, were compared with <em>Apis mellifera</em> using <em>BLASTP</em>. The BLASTP alignment criteria required &gt;70% identity, &gt;75% coverage of the query gene, and &gt;75% coverage of the subject gene. The gene with the highest identity was considered the best BLASTP match to <em>Apis mellifera</em>.</p>
+
+            <h4>Non-Coding RNA and Repeat Annotations</h4>
+            <p>Additionally, HoneyGDB features a section dedicated to non-coding RNA (ncRNA) information, curated from various studies and databases to emphasize the crucial role of ncRNAs in regulating gene expression and cellular functions. Researchers can explore a diverse array of ncRNAs, including long non-coding RNAs (lncRNAs) and other functional ncRNA elements. The database offers comprehensive details on their sequences, structures, and potential target genes, providing a valuable resource for studying the regulatory roles of ncRNAs in <em>Apis mellifera</em> biology.</p>
+            <p>For repeat element annotation, we utilized <em>EDTA</em> to perform a comprehensive annotation of long terminal repeat (LTR) retrotransposons. This approach enhances our understanding of genomic structure and evolution by identifying and classifying LTR elements within the honeybee genome, offering insights into their functional and evolutionary significance.</p>
+
+            <h4>Synteny, Collinearity, and Phylogenomics</h4>
+            <p>HoneyGDB includes synteny analysis and phylogenomics data from various hymenopteran species, using <em>Apis mellifera</em> as the anchor species. The analysis was carried out using <em>Diamond BLAST</em> to find RBH, <em>MCScanX</em>, and <em>Orthofinder</em>. This data enables researchers to explore genomic similarities and evolutionary relationships, providing valuable insights into the genetic basis of hymenopteran traits and behaviors.</p>
+        </div>
+
+        <!-- Results Section -->
+        <div class="content-section">
+            <h2 class="section-title">Results</h2>
+            <p>The Honeybee Genome Database (HoneyGDB) leverages a custom schema, designed to integrate seamlessly within a MySQL database management system and made accessible through an Apache server setup. Each species and assembly version is maintained in its own MySQL database, ensuring version control and easy retrieval of historical data. HoneyGDB provides access to assembled genomes and a wealth of biological evidence supporting gene models, chromosomal organization, and functional annotations.</p>
+            <p>The front-end of HoneyGDB is developed with PHP, JavaScript, and Bootstrap, providing a responsive, user-friendly interface for researchers. JavaScript is employed extensively for interactive data visualization and real-time database querying, allowing users to explore genome data dynamically. The PHP-based backend interacts with MySQL to handle data requests efficiently, delivering structured results to the front end. Researchers can explore various tools within HoneyGDB, such as genome browsers, synteny viewers, and data download portals, all accessible via a web interface tailored to the research community’s needs.</p>
+            <img src="Figure2.1.svg" alt="Architecture of HoneyGDB" class="poster-svg">
+        </div>
+
+        <!-- Discussion Section -->
+        <div class="content-section">
+            <h2 class="section-title">Discussion</h2>
+            <p>HoneyGDB marks a pivotal step forward in the domain of honeybee genomics by integrating multi-omics data into a user-friendly platform designed to address the diverse needs of the scientific community. With its focus on Apis species, HoneyGDB enables researchers to explore genomic, transcriptomic, proteomic, and variomic data through a single interface, thereby streamlining studies into honeybee biology and health. This capability is especially crucial given the increasing complexity of modern genomic research, which often involves analyzing vast datasets that span multiple biological layers.</p>
+            <p>The platform’s capacity to support a wide array of Apis species—ranging from the extensively studied <em>Apis mellifera</em> to the newly sequenced <em>Apis laboriosa</em>—provides valuable insights into species-specific adaptations and general evolutionary patterns. Moreover, HoneyGDB fills a critical void by overcoming the limitations of earlier databases, such as BeeBase, by offering comprehensive integration of omics data, including functional annotations, gene expression data, and proteomics data. This integration facilitates not only basic research into honeybee biology but also applied research that can impact global agriculture and conservation efforts.</p>
+            <p>HoneyGDB’s inclusion of tools like JBrowse2, BLAST, and synteny analysis further enhances its utility. Researchers can visually navigate through genomes, compare gene order across species, and identify orthologous genes, enabling a deeper understanding of the evolutionary and functional relationships within the Hymenoptera order. The platform’s accessibility and integration of genomic, proteomic, and transcriptomic resources provide a holistic view of honeybee biology, from evolutionary history to gene regulation and protein function.</p>
+
+            <h4>Varroa Resistance and Honeybee Health</h4>
+            <p>One of HoneyGDB’s most valuable applications is studying Varroa mite resistance, a pressing issue in apiculture. The platform's variome and diversity datasets, combined with advanced analytical tools, allow for in-depth exploration of genetic variants associated with resistance traits. This capability will facilitate the development of targeted breeding programs aimed at enhancing resistance to the <em>Varroa destructor</em> and other pests. Additionally, the integration of transcriptomic data provides the opportunity to explore gene expression responses to environmental stressors and disease, enabling more comprehensive studies of colony health.</p>
+            <p>The utility of HoneyGDB in agricultural research, particularly in addressing colony collapse disorder (CCD), cannot be overstated. By providing access to multi-omics data, the platform enables researchers to investigate the molecular pathways involved in stress responses, pathogen defense, and overall colony health. This insight is crucial in developing sustainable strategies to mitigate the effects of CCD, which threatens global food security due to the honeybee’s vital role in pollination.</p>
+        </div>
+
+        <!-- Future Directions Section -->
+        <div class="content-section">
+            <h2 class="section-title">Future Directions</h2>
+            <p><strong>Expanding Multi-Omics Data Integration:</strong> While HoneyGDB has made significant strides in integrating genomics, transcriptomics, and proteomics data, future versions of the platform should focus on expanding into additional omics layers such as epigenomics and metabolomics. This would allow for a more comprehensive understanding of the regulatory mechanisms that govern honeybee biology. For instance, epigenetic modifications, which play a key role in gene regulation, could provide insights into how honeybees adapt to environmental challenges.</p>
+            <p><strong>Population Genomics and Environmental Adaptation:</strong> Another promising direction for HoneyGDB is the inclusion of more extensive population genomics datasets. By incorporating whole-genome sequencing data from diverse honeybee populations, HoneyGDB could facilitate research into local adaptations, migratory patterns, and the genetic basis of traits such as disease resistance and thermal tolerance. Such research is especially relevant in the context of climate change, which poses a growing threat to honeybee populations worldwide.</p>
+            <p><strong>Enhanced Data Mining and Machine Learning Tools:</strong> As the volume of omics data continues to grow, incorporating advanced data mining and machine learning algorithms will be essential to unlock the full potential of HoneyGDB. These tools could automate the discovery of gene-trait associations, predict the effects of genetic variants, and identify novel molecular markers for traits of interest. Machine learning algorithms, in particular, could be applied to predict the impact of environmental stressors on honeybee health by analyzing patterns in gene expression and proteomic data.</p>
+            <p><strong>Collaborative Research and Community-Driven Expansion:</strong> HoneyGDB’s future success depends on fostering a collaborative research environment. Expanding the platform’s community resources—such as the BeeHub portal—will encourage user-driven contributions, including new datasets, tools, and annotations. Collaborative projects that leverage HoneyGDB’s data, particularly those focused on large-scale initiatives like the Darwin Tree of Life project, could accelerate the discovery of new insights into honeybee biology and conservation.</p>
+            <p><strong>Expanding to Other Hymenoptera Species:</strong> While HoneyGDB is currently focused on Apis species, its framework could be extended to include other Hymenoptera species, such as ants and wasps. These species share many biological traits with honeybees, and studying their genomics could offer valuable insights into social behavior, immune responses, and evolutionary processes. Expanding the platform’s scope to encompass a broader range of Hymenoptera would make HoneyGDB an even more powerful tool for comparative genomics and evolutionary biology.</p>
+        </div>
+
+        <!-- Conclusion Section -->
+        <div class="content-section">
+            <h2 class="section-title">Conclusion</h2>
+            <p>HoneyGDB is a groundbreaking platform that has revolutionized the study of honeybee genomics by integrating diverse omics datasets into a comprehensive and user-friendly resource. Its applications in addressing pressing issues like Varroa mite resistance, colony collapse disorder, and pollination sustainability are of immense value to both researchers and agricultural practitioners. Looking ahead, HoneyGDB has the potential to drive further advances in honeybee research by incorporating additional omics layers, expanding population genomics data, and embracing cutting-edge computational tools. As the platform continues to evolve, it is poised to make lasting contributions to the study and conservation of one of the world’s most essential pollinators.</p>
+        </div>
+
+        <!-- References Section -->
+        <div class="references">
+            <h2 class="section-title">References</h2>
+            <ol>
+                <li>Adams, M. D., Celniker, S. E., Holt, R. A., Evans, C. A., Gocayne, J. D., Amanatides, P. G., Scherer, S. E., Li, P. W., Hoskins, R. A., Galle, R. F., George, R. A., Lewis, S. E., Richards, S., Ashburner, M., Henderson, S. N., Sutton, G. G., Wortman, J. R., Yandell, M. D., Zhang, Q., ... Venter, J. C. (2000). The genome sequence of <em>Drosophila melanogaster</em>. <em>Science</em>, 287(5461), 2185-2195. https://doi.org/10.1126/science.287.5461.2185</li>
+                <li>Albertin, C. B., Simakov, O., Mitros, T., Wang, Z. Y., Pungor, J. R., Edsinger-Gonzales, E., Brenner, S., Ragsdale, C. W., & Rokhsar, D. S. (2015). The octopus genome and the evolution of cephalopod neural and morphological novelties. <em>Nature</em>, 524(7564), 220-224. https://doi.org/10.1038/nature14668</li>
+                <li>Athar, A., Fullgrabe, A., George, N., Iqbal, H., Huerta, L., Ali, A., Snow, C., Fonseca, N. A., Petryszak, R., Papatheodorou, I., Sarkans, U., & Brazma, A. (2019). ArrayExpress update - from bulk to single-cell expression data. <em>Nucleic Acids Res</em>, 47(D1), D711-D715. https://doi.org/10.1093/nar/gky964</li>
+                <li>Bolger, A. M., Lohse, M., & Usadel, B. (2014). Trimmomatic: a flexible trimmer for Illumina sequence data. <em>Bioinformatics</em>, 30(15), 2114-2120. https://doi.org/10.1093/bioinformatics/btu170</li>
+                <li>Bovo, S., Utzeri, V. J., Ribani, A., Taurisano, V., Schiavo, G., & Fontanesi, L. (2022). A genotyping by sequencing approach can disclose <em>Apis mellifera</em> population genomic information contained in honey environmental DNA. <em>Sci Rep</em>, 12(1), 19541. https://doi.org/10.1038/s41598-022-24101-z</li>
+                <li>Buchfink, B., Xie, C., & Huson, D. H. (2015). Fast and sensitive protein alignment using DIAMOND. <em>Nat Methods</em>, 12(1), 59-60. https://doi.org/10.1038/nmeth.3176</li>
+                <li>Carreck, N., & Williams, I. (2015). The economic value of bees in the UK. <em>Bee World</em>, 79(3), 115-123. https://doi.org/10.1080/0005772x.1998.11099393</li>
+                <li>Chan, Q. W., Chan, M. Y., Logan, M., Fang, Y., Higo, H., & Foster, L. J. (2013). Honey bee protein atlas at organ-level resolution. <em>Genome Res</em>, 23(11), 1951-1960. https://doi.org/10.1101/gr.155994.113</li>
+                <li>Cingolani, P., Platts, A., Wang le, L., Coon, M., Nguyen, T., Wang, L., Land, S. J., Lu, X., & Ruden, D. M. (2012). A program for annotating and predicting the effects of single nucleotide polymorphisms, SnpEff: SNPs in the genome of <em>Drosophila melanogaster</em> strain w1118; iso-2; iso-3. <em>Fly (Austin)</em>, 6(2), 80-92. https://doi.org/10.4161/fly.19695</li>
+                <li>Colbourne, J. K., Pfrender, M. E., Gilbert, D., Thomas, W. K., Tucker, A., Oakley, T. H., Tokishita, S., Aerts, A., Arnold, G. J., Basu, M. K., Bauer, D. J., Cáceres, C. E., Carmel, L., Casola, C., Choi, J.-H., Detter, J. C., Dong, Q., Dusheyko, S., Eads, B. D., ... Boore, J. L. (2011). The Ecoresponsive Genome of <em>Daphnia pulex</em>. <em>Science</em>, 331(6017), 555-561. https://doi.org/doi:10.1126/science.1197761</li>
+                <li>Collins, F. S., Morgan, M., & Patrinos, A. (2003). The Human Genome Project: lessons from large-scale biology. <em>Science</em>, 300(5617), 286-290. https://doi.org/10.1126/science.1084564</li>
+                <li>Darwin Tree of Life Project, C. (2022). Sequence locally, think globally: The Darwin Tree of Life Project. <em>Proc Natl Acad Sci U S A</em>, 119(4). https://doi.org/10.1073/pnas.2115642118</li>
+                <li>Ekblom, R., & Galindo, J. (2011). Applications of next generation sequencing in molecular ecology of non-model organisms. <em>Heredity (Edinb)</em>, 107(1), 1-15. https://doi.org/10.1038/hdy.2010.152</li>
+                <li>Ekblom, R., & Wolf, J. B. (2014). A field guide to whole-genome sequencing, assembly and annotation. <em>Evol Appl</em>, 7(9), 1026-1042. https://doi.org/10.1111/eva.12178</li>
+                <li>Elsik, C. G., Worley, K. C., Zhang, L., Milshina, N. V., Jiang, H., Reese, J. T., Childs, K. L., Venkatraman, A., Dickens, C. M., Weinstock, G. M., & Gibbs, R. A. (2006). Community annotation: procedures, protocols, and supporting tools. <em>Genome Res</em>, 16(11), 1329-1333. https://doi.org/10.1101/gr.5580606</li>
+                <li>Emms, D. M., & Kelly, S. (2019). OrthoFinder: phylogenetic orthology inference for comparative genomics. <em>Genome Biol</em>, 20(1), 238. https://doi.org/10.1186/s13059-019-1832-y</li>
+                <li>Foote, A. D., Liu, Y., Thomas, G. W., Vinar, T., Alfoldi, J., Deng, J., Dugan, S., van Elk, C. E., Hunter, M. E., Joshi, V., Khan, Z., Kovar, C., Lee, S. L., Lindblad-Toh, K., Mancia, A., Nielsen, R., Qin, X., Qu, J., Raney, B. J., ... Gibbs, R. A. (2015). Convergent evolution of the genomes of marine mammals. <em>Nat Genet</em>, 47(3), 272-275. https://doi.org/10.1038/ng.3198</li>
+                <li>Fouks, B., Brand, P., Nguyen, H. N., Herman, J., Camara, F., Ence, D., Hagen, D. E., Hoff, K. J., Nachweide, S., Romoth, L., Walden, K. K. O., Guigo, R., Stanke, M., Narzisi, G., Yandell, M., Robertson, H. M., Koeniger, N., Chantawannakul, P., Schatz, M. C., ... Rueppell, O. (2021). The genomic basis of evolutionary differentiation among honey bees. <em>Genome Res</em>, 31(7), 1203-1215. https://doi.org/10.1101/gr.272310.120</li>
+                <li>Garrison, E., & Marth, G. (2012). Haplotype-based variant detection from short-read sequencing. <em>arXiv</em>, 1207.</li>
+                <li>Genath, A., Sharbati, S., Buer, B., Nauen, R., & Einspanier, R. (2020). Comparative transcriptomics indicates endogenous differences in detoxification capacity after formic acid treatment between honey bees and varroa mites. <em>Sci Rep</em>, 10(1), 21943. https://doi.org/10.1038/s41598-020-79057-9</li>
+                <li>Goodwin, S., McPherson, J. D., & McCombie, W. R. (2016). Coming of age: ten years of next-generation sequencing technologies. <em>Nat Rev Genet</em>, 17(6), 333-351. https://doi.org/10.1038/nrg.2016.49</li>
+                <li>Grozinger, C. M., & Robinson, G. E. (2015). The power and promise of applying genomics to honey bee health. <em>Current Opinion in Insect Science</em>, 10, 124-132. https://doi.org/10.1016/j.cois.2015.03.007</li>
+                <li>Grozinger, C. M., & Zayed, A. (2020). Improving bee health through genomics. <em>Nat Rev Genet</em>, 21(5), 277-291. https://doi.org/10.1038/s41576-020-0216-1</li>
+                <li>Haeussler, M., Zweig, A. S., Tyner, C., Speir, M. L., Rosenbloom, K. R., Raney, B. J., Lee, C. M., Lee, B. T., Hinrichs, A. S., Gonzalez, J. N., Gibson, D., Diekhans, M., Clawson, H., Casper, J., Barber, G. P., Haussler, D., Kuhn, R. M., & Kent, W. J. (2019). The UCSC Genome Browser database: 2019 update. <em>Nucleic Acids Res</em>, 47(D1), D853-D858. https://doi.org/10.1093/nar/gky1095</li>
+                <li>Haug, K., Cochrane, K., Nainala, V. C., Williams, M., Chang, J., Jayaseelan, K. V., & O'Donovan, C. (2020). MetaboLights: a resource evolving in response to the needs of its scientific community. <em>Nucleic Acids Res</em>, 48(D1), D440-D444. https://doi.org/10.1093/nar/gkz1019</li>
+                <li>Holt, C., & Yandell, M. (2011). MAKER2: an annotation pipeline and genome-database management tool for second-generation genome projects. <em>BMC Bioinformatics</em>, 12(1), 491. https://doi.org/10.1186/1471-2105-12-491</li>
+                <li>Hughes, A. R., Inouye, B. D., Johnson, M. T., Underwood, N., & Vellend, M. (2008). Ecological consequences of genetic diversity. <em>Ecol Lett</em>, 11(6), 609-623. https://doi.org/10.1111/j.1461-0248.2008.01179.x</li>
+                <li>Jones, P., Binns, D., Chang, H. Y., Fraser, M., Li, W., McAnulla, C., McWilliam, H., Maslen, J., Mitchell, A., Nuka, G., Pesseat, S., Quinn, A. F., Sangrador-Vegas, A., Scheremetjew, M., Yong, S. Y., Lopez, R., & Hunter, S. (2014). InterProScan 5: genome-scale protein function classification. <em>Bioinformatics</em>, 30(9), 1236-1240. https://doi.org/10.1093/bioinformatics/btu031</li>
+                <li>Kanehisa, M., & Goto, S. (2000). KEGG: Kyoto Encyclopedia of Genes and Genomes. <em>Nucleic Acids Res</em>, 28(1), 27-30. https://doi.org/10.1093/nar/28.1.27</li>
+                <li>Kang, I., Kim, W., Lim, J. Y., Lee, Y., & Shin, C. (2021). Organ-specific transcriptome analysis reveals differential gene expression in different castes under natural conditions in <em>Apis cerana</em>. <em>Sci Rep</em>, 11(1), 11267. https://doi.org/10.1038/s41598-021-90635-3</li>
+                <li>Karp, P. D., Billington, R., Caspi, R., Fulcher, C. A., Latendresse, M., Kothari, A., Keseler, I. M., Krummenacker, M., Midford, P. E., Ong, Q., Ong, W. K., Paley, S. M., & Subhraveti, P. (2019). The BioCyc collection of microbial genomes and metabolic pathways. <em>Brief Bioinform</em>, 20(4), 1085-1093. https://doi.org/10.1093/bib/bbx085</li>
+                <li>Kim, D., Paggi, J. M., Park, C., Bennett, C., & Salzberg, S. L. (2019). Graph-based genome alignment and genotyping with HISAT2 and HISAT-genotype. <em>Nat Biotechnol</em>, 37(8), 907-915. https://doi.org/10.1038/s41587-019-0201-4</li>
+                <li>Klein, A. M., Vaissière, B. E., Cane, J. H., Steffan-Dewenter, I., Cunningham, S. A., Kremen, C., & Tscharntke, T. (2007). Importance of pollinators in changing landscapes for world crops [Review]. <em>Proceedings of the Royal Society B-Biological Sciences</em>, 274(1608), 303-313. https://doi.org/10.1098/rspb.2006.3721</li>
+                <li>Lemaitre, C., Tannier, E., Gautier, C., & Sagot, M. F. (2008). Precise detection of rearrangement breakpoints in mammalian chromosomes. <em>BMC Bioinformatics</em>, 9, 286. https://doi.org/10.1186/1471-2105-9-286</li>
+                <li>Lewin, H. A., Robinson, G. E., Kress, W. J., Baker, W. J., Coddington, J., Crandall, K. A., Durbin, R., Edwards, S. V., Forest, F., Gilbert, M. T. P., Goldstein, M. M., Grigoriev, I. V., Hackett, K. J., Haussler, D., Jarvis, E. D., Johnson, W. E., Patrinos, A., Richards, S., Castilla-Rubio, J. C., ... Zhang, G. (2018). Earth BioGenome Project: Sequencing life for the future of life. <em>Proc Natl Acad Sci U S A</em>, 115(17), 4325-4333. https://doi.org/10.1073/pnas.1720115115</li>
+                <li>Lin, D., Lan, L., Zheng, T., Shi, P., Xu, J., & Li, J. (2021). Comparative Genomics Reveals Recent Adaptive Evolution in Himalayan Giant Honeybee <em>Apis laboriosa</em>. <em>Genome Biol Evol</em>, 13(10). https://doi.org/10.1093/gbe/evab227</li>
+                <li>Lyons, E., & Freeling, M. (2008). How to usefully compare homologous plant genes and chromosomes as DNA sequences. <em>Plant J</em>, 53(4), 661-673. https://doi.org/10.1111/j.1365-313X.2007.03326.x</li>
+                <li>Misof, B., Liu, S., Meusemann, K., Peters, R. S., Donath, A., Mayer, C., Frandsen, P. B., Ware, J., Flouri, T., Beutel, R. G., Niehuis, O., Petersen, M., Izquierdo-Carrasco, F., Wappler, T., Rust, J., Aberer, A. J., Aspöck, U., Aspöck, H., Bartel, D., ... Zhou, X. (2014). Phylogenomics resolves the timing and pattern of insect evolution. <em>Science</em>, 346(6210), 763-767. https://doi.org/doi:10.1126/science.1257570</li>
+                <li>Muir, P., Li, S., Lou, S., Wang, D., Spakowicz, D. J., Salichos, L., Zhang, J., Weinstock, G. M., Isaacs, F., Rozowsky, J., & Gerstein, M. (2016). The real cost of sequencing: scaling computation to keep pace with data generation. <em>Genome Biol</em>, 17, 53. https://doi.org/10.1186/s13059-016-0917-0</li>
+                <li>Mullin, C. A., Frazier, M., Frazier, J. L., Ashcraft, S., Simonds, R., Vanengelsdorp, D., & Pettis, J. S. (2010). High levels of miticides and agrochemicals in North American apiaries: implications for honey bee health. <em>PLOS ONE</em>, 5(3), e9754. https://doi.org/10.1371/journal.pone.0009754</li>
+                <li>Ou, S., Su, W., Liao, Y., Chougule, K., Agda, J. R. A., Hellinga, A. J., Lugo, C. S. B., Elliott, T. A., Ware, D., Peterson, T., Jiang, N., Hirsch, C. N., & Hufford, M. B. (2019). Benchmarking transposable element annotation methods for creation of a streamlined, comprehensive pipeline. <em>Genome Biol</em>, 20(1), 275. https://doi.org/10.1186/s13059-019-1905-y</li>
+                <li>Park, D., Jung, J. W., Choi, B.-S., Jayakodi, M., Lee, J., Lim, J., Yu, Y., Choi, Y.-S., Lee, M.-L., Park, Y., Choi, I.-Y., Yang, T.-J., Edwards, O. R., Nah, G., & Kwon, H. W. (2015). Uncovering the novel characteristics of Asian honey bee, <em>Apis cerana</em>, by whole genome sequencing. <em>BMC Genomics</em>, 16(1), 1. https://doi.org/10.1186/1471-2164-16-1</li>
+                <li>Pertea, M., Pertea, G. M., Antonescu, C. M., Chang, T. C., Mendell, J. T., & Salzberg, S. L. (2015). <em>StringTie</em> enables improved reconstruction of a transcriptome from RNA-seq reads. <em>Nat Biotechnol</em>, 33(3), 290-295. https://doi.org/10.1038/nbt.3122</li>
+                <li>Peters, R. S., Krogmann, L., Mayer, C., Donath, A., Gunkel, S., Meusemann, K., Kozlov, A., Podsiadlowski, L., Petersen, M., Lanfear, R., Diez, P. A., Heraty, J., Kjer, K. M., Klopfstein, S., Meier, R., Polidori, C., Schmitt, T., Liu, S., Zhou, X., ... Niehuis, O. (2017). Evolutionary History of the Hymenoptera. <em>Curr Biol</em>, 27(7), 1013-1018. https://doi.org/10.1016/j.cub.2017.01.027</li>
+                <li>Piou, V., Vilarem, C., Blanchard, S., Armengaud, C., Heeb, P., & Vetillard, A. (2023). Varroa destructor relies on physical cues to feed in artificial conditions. <em>Parasite</em>, 30, 49. https://doi.org/10.1051/parasite/2023049</li>
+                <li>Potts, S. G., Biesmeijer, J. C., Kremen, C., Neumann, P., Schweiger, O., & Kunin, W. E. (2010). Global pollinator declines: trends, impacts and drivers [Review]. <em>Trends in Ecology & Evolution</em>, 25(6), 345-353. https://doi.org/10.1016/j.tree.2010.01.007</li>
+                <li>Quinlan, A. R., & Hall, I. M. (2010). BEDTools: a flexible suite of utilities for comparing genomic features. <em>Bioinformatics</em>, 26(6), 841-842. https://doi.org/10.1093/bioinformatics/btq033</li>
+                <li>Rattanawannee, A., Chanchao, C., Lim, J., Wongsiri, S., & Oldroyd, B. P. (2012). Genetic structure of a giant honey bee (<em>Apis dorsata</em>) population in northern Thailand: implications for conservation. <em>Insect Conservation and Diversity</em>, 6(1), 38-44. https://doi.org/10.1111/j.1752-4598.2012.00193.x</li>
+                <li>Rehan, S. M., & Toth, A. L. (2015). Climbing the social ladder: the molecular evolution of sociality. <em>Trends Ecol Evol</em>, 30(7), 426-433. https://doi.org/10.1016/j.tree.2015.05.004</li>
+                <li>Santamaria, N., Gerdtz, M., Sage, S., McCann, J., Freeman, A., Vassiliou, T., De Vincentis, S., Ng, A. W., Manias, E., Liu, W., & Knott, J. (2015). A randomised controlled trial of the effectiveness of soft silicone multi-layered foam dressings in the prevention of sacral and heel pressure ulcers in trauma and critically ill patients: the border trial. <em>Int Wound J</em>, 12(3), 302-308. https://doi.org/10.1111/iwj.12101</li>
+                <li>Sayers, E. W., Beck, J., Bolton, E. E., Bourexis, D., Brister, J. R., Canese, K., Comeau, D. C., Funk, K., Kim, S., Klimke, W., Marchler-Bauer, A., Landrum, M., Lathrop, S., Lu, Z., Madden, T. L., O'Leary, N., Phan, L., Rangwala, S. H., Schneider, V. A., ... Sherry, S. T. (2021). Database resources of the National Center for Biotechnology Information. <em>Nucleic Acids Res</em>, 49(D1), D10-D17. https://doi.org/10.1093/nar/gkaa892</li>
+                <li>Schopf, J. W. (2006). Fossil evidence of Archaean life. <em>Philos Trans R Soc Lond B Biol Sci</em>, 361(1470), 869-885. https://doi.org/10.1098/rstb.2006.1834</li>
+                <li>Simola, D. F., Graham, R. J., Brady, C. M., Enzmann, B. L., Desplan, C., Ray, A., Zwiebel, L. J., Bonasio, R., Reinberg, D., Liebig, J., & Berger, S. L. (2016). Epigenetic (re)programming of caste-specific behavior in the ant <em>Camponotus floridanus</em>. <em>Science</em>, 351(6268), aac6633. https://doi.org/10.1126/science.aac6633</li>
+                <li>Slatkin, M., & Racimo, F. (2016). Ancient DNA and human history. <em>Proceedings of the National Academy of Sciences</em>, 113(23), 6380-6387. https://doi.org/doi:10.1073/pnas.1524306113</li>
+                <li>Solignac, M., Zhang, L., Mougel, F., Li, B., Vautrin, D., Monnerot, M., Cornuet, J. M., Worley, K. C., Weinstock, G. M., & Gibbs, R. A. (2007). The genome of <em>Apis mellifera</em>: dialog between linkage mapping and sequence assembly. <em>Genome Biol</em>, 8(3), 403. https://doi.org/10.1186/gb-2007-8-3-403</li>
+                <li>Steinegger, M., & Soding, J. (2017). MMseqs2 enables sensitive protein sequence searching for the analysis of massive data sets. <em>Nat Biotechnol</em>, 35(11), 1026-1028. https://doi.org/10.1038/nbt.3988</li>
+                <li>Thurmond, J., Goodman, J. L., Strelets, V. B., Attrill, H., Gramates, L. S., Marygold, S. J., Matthews, B. B., Millburn, G., Antonazzo, G., Trovisco, V., Kaufman, T. C., Calvi, B. R., & FlyBase, C. (2019). FlyBase 2.0: the next generation. <em>Nucleic Acids Res</em>, 47(D1), D759-D765. https://doi.org/10.1093/nar/gky1003</li>
+                <li>Tihelka, E., Cai, C., Pisani, D., & Donoghue, P. C. J. (2020). Mitochondrial genomes illuminate the evolutionary history of the Western honey bee (<em>Apis mellifera</em>). <em>Sci Rep</em>, 10(1), 14515. https://doi.org/10.1038/s41598-020-71393-0</li>
+                <li>UniProt, C. (2021). UniProt: the universal protein knowledgebase in 2021. <em>Nucleic Acids Res</em>, 49(D1), D480-D489. https://doi.org/10.1093/nar/gkaa1100</li>
+                <li>Van de Peer, Y., Mizrachi, E., & Marchal, K. (2017). The evolutionary significance of polyploidy. <em>Nat Rev Genet</em>, 18(7), 411-424. https://doi.org/10.1038/nrg.2017.26</li>
+                <li>Wahlberg, N., Wheat, C. W., & Pena, C. (2013). Timing and patterns in the taxonomic diversification of Lepidoptera (butterflies and moths). <em>PLOS ONE</em>, 8(11), e80875. https://doi.org/10.1371/journal.pone.0080875</li>
+                <li>Wallberg, A., Bunikis, I., Pettersson, O. V., Mosbech, M. B., Childers, A. K., Evans, J. D., Mikheyev, A. S., Robertson, H. M., Robinson, G. E., & Webster, M. T. (2019). A hybrid de novo genome assembly of the honeybee, <em>Apis mellifera</em>, with chromosome-length scaffolds. <em>BMC Genomics</em>, 20(1), 275. https://doi.org/10.1186/s12864-019-5642-0</li>
+                <li>Wallberg, A., Han, F., Wellhagen, G., Dahle, B., Kawata, M., Haddad, N., Simoes, Z. L., Allsopp, M. H., Kandemir, I., De la Rua, P., Pirk, C. W., & Webster, M. T. (2014). A worldwide survey of genome sequence variation provides insight into the evolutionary history of the honeybee <em>Apis mellifera</em>. <em>Nat Genet</em>, 46(10), 1081-1088. https://doi.org/10.1038/ng.3077</li>
+                <li>Wang, Y., Tang, H., DeBarry, J. D., Tan, X., Li, J., Wang, X., Lee, T.-h., Jin, H., Marler, B., Guo, H., Kissinger, J. C., & Paterson, A. H. (2012). <em>MCScanX</em>: a toolkit for detection and evolutionary analysis of gene synteny and collinearity. <em>Nucleic Acids Res</em>, 40(7), e49-e49. https://doi.org/10.1093/nar/gkr1293</li>
+                <li>Wilfert, L., Long, G., Leggett, H. C., Schmid-Hempel, P., Butlin, R., Martin, S. J. M., & Boots, M. (2016). Deformed wing virus is a recent global epidemic in honeybees driven by <em>Varroa</em> mites. <em>Science</em>, 351(6273), 594-597. https://doi.org/doi:10.1126/science.aac9976</li>
+                <li>Yates, A. D., Achuthan, P., Akanni, W., Allen, J., Allen, J., Alvarez-Jarreta, J., Amode, M. R., Armean, I. M., Azov, A. G., Bennett, R., Bhai, J., Billis, K., Boddu, S., Marugan, J. C., Cummins, C., Davidson, C., Dodiya, K., Fatima, R., Gall, A., ... Flicek, P. (2020). Ensembl 2020. <em>Ensembl</em>. <em>Nucleic Acids Res</em>, 48(D1), D682-D688. https://doi.org/10.1093/nar/gkz966</li>
+                <li>Zhang, Z. H., Jhaveri, D. J., Marshall, V. M., Bauer, D. C., Edson, J., Narayanan, R. K., Robinson, G. J., Lundberg, A. E., Bartlett, P. F., Wray, N. R., & Zhao, Q. Y. (2014). A comparative study of techniques for differential expression analysis on RNA-Seq data. <em>PLOS ONE</em>, 9(8), e103207. https://doi.org/10.1371/journal.pone.0103207</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 HoneyGDB. All rights reserved.
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+        integrity="sha384-DfXdjbV7jQkmgjFdvPp1uSE0fpHVcYjnwmlzVwYkl2wT2Pn0X/EoU3wBjBT7v1q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" 
+        integrity="sha384-9/reFTGAW83EW2RDuEInXxPPMmlmJONaZlXr5pXyPwhgKm1QeE1bwxX48aaQIjh" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" 
+        integrity="sha384-B0UglyR+LYd+e/qm1VqKChzxXEhxr9oD5bU6lyiUpz7oV6E66oqEsg2fPj4MDT3" crossorigin="anonymous"></script>
+    <script>
+        // Dropdown submenu functionality
+        $(document).ready(function(){
+            $('.dropdown-submenu a.dropdown-toggle').on("click", function(e){
+                e.preventDefault();
+                e.stopPropagation();
+                $(this).next('.submenu').toggle();
+            });
+        });
+    </script>
+</body>
+</html>
