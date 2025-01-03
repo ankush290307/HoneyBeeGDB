@@ -177,13 +177,13 @@
         <!-- Abstract Section -->
         <div class="content-section">
             <h2 class="section-title">Abstract</h2>
-            <p>Honeybees (Apis species) are essential for global agriculture and ecosystems, providing crucial pollination services. <strong>HoneyGDB</strong> (<a href="http://chibba.agtec.uga.edu/HoneyGDB">http://chibba.agtec.uga.edu/HoneyGDB</a>) is a user-friendly web platform that integrates genomic, transcriptomic, and proteomic data across major Apis species. It addresses gaps in existing databases by offering comprehensive multi-omics integration, supporting research on honeybee health and Varroa mite resistance. HoneyGDB facilitates advancements in sustainable agriculture, improved pollination practices, and conservation efforts.</p>
+            <p>Honeybees (Apis species) are essential for global agriculture and ecosystems, providing crucial pollination services [1]. <strong>HoneyGDB</strong> (<a href="http://chibba.agtec.uga.edu/HoneyGDB">http://chibba.agtec.uga.edu/HoneyGDB</a>) is a user-friendly web platform that integrates genomic, transcriptomic, and proteomic data across major Apis species [2]. It addresses gaps in existing databases by offering comprehensive multi-omics integration, supporting research on honeybee health and Varroa mite resistance [3]. HoneyGDB facilitates advancements in sustainable agriculture, improved pollination practices, and conservation efforts [4].</p>
         </div>
 
         <!-- Introduction Section -->
         <div class="content-section">
             <h2 class="section-title">Introduction</h2>
-            <p>With the advancement of genome sequencing technologies, large-scale genomic data for honeybees have become accessible. However, existing databases like BeeBase lack comprehensive multi-omics integration. <strong>HoneyGDB</strong> bridges this gap by consolidating genomic, transcriptomic, and proteomic data for species including <em>A. mellifera</em>, <em>A. cerana</em>, <em>A. dorsata</em>, <em>A. florea</em>, and <em>A. laboriosa</em>. This platform democratizes data access, enabling researchers and beekeepers to explore honeybee biology, behavior, and health effectively.</p>
+            <p>Advancements in genome sequencing have made large-scale genomic data for honeybees readily available [5]. However, existing databases like BeeBase lack comprehensive multi-omics integration [6]. <strong>HoneyGDB</strong> consolidates genomic, transcriptomic, and proteomic data for species including <em>A. mellifera</em>, <em>A. cerana</em>, <em>A. dorsata</em>, <em>A. florea</em>, and <em>A. laboriosa</em> [7]. This platform democratizes data access, enabling researchers and beekeepers to explore honeybee biology, behavior, and health effectively [8].</p>
         </div>
 
         <!-- Materials and Methods Section -->
@@ -191,36 +191,36 @@
             <h2 class="section-title">Materials & Methods</h2>
 
             <h5>Genome Data</h5>
-            <p>HoneyGDB aggregates genome assemblies and gene sets for various Apis species, annotated using NCBI RefSeq, Gene Ontology, UniProt, and InterPro. Cross-references are managed via IntersectBed for accurate gene identification.</p>
+            <p>HoneyGDB aggregates genome assemblies and gene sets for various Apis species, annotated using NCBI RefSeq, Gene Ontology, UniProt, and InterPro [9]. Cross-references are managed via IntersectBed to ensure accurate gene identification [10].</p>
 
             <h5>Transcriptome Data</h5>
-            <p>RNA-Seq datasets from NCBI SRA are processed with Trimmomatic and aligned using HISAT2. Gene expression is quantified using StringTie and BedTools, providing FPKM and RPKM values for comprehensive analysis.</p>
+            <p>RNA-Seq datasets from NCBI SRA are processed with Trimmomatic and aligned using HISAT2 [11][12]. Gene expression is quantified using StringTie and BedTools, providing FPKM and RPKM values for comprehensive analysis [13].</p>
 
             <h5>Genetic Variations</h5>
-            <p>Whole-genome sequencing data are aligned to reference genomes using Freebayes, and variants are annotated with SNPeff. This dataset aids in studying population structure and resistance traits.</p>
+            <p>Whole-genome sequencing data are aligned to reference genomes using Freebayes, and variants are annotated with SNPeff [14][15]. This dataset aids in studying population structure and resistance traits [16].</p>
 
             <h5>Proteomics Integration</h5>
-            <p>Data from the HoneyBee Protein Atlas are linked via gene identifiers, offering detailed proteomic information across honeybee castes and tissues.</p>
+            <p>Data from the HoneyBee Protein Atlas are linked via gene identifiers, offering detailed proteomic information across honeybee castes and tissues [17].</p>
 
             <h5>Functional Annotation</h5>
-            <p>Gene models are re-annotated using InterProScan and KAAS for KEGG orthology. BLASTP comparisons with <em>A. mellifera</em> ensure accurate functional predictions.</p>
+            <p>Gene models are re-annotated using InterProScan and KAAS for KEGG orthology [18][19]. BLASTP comparisons with <em>A. mellifera</em> ensure accurate functional predictions [20].</p>
 
             <h5>Synteny & Phylogenomics</h5>
-            <p>Using Diamond BLAST, MCScanX, and Orthofinder, HoneyGDB provides synteny and phylogenomic data, facilitating evolutionary studies within Hymenoptera.</p>
+            <p>Using Diamond BLAST, MCScanX, and Orthofinder, HoneyGDB provides synteny and phylogenomic data, facilitating evolutionary studies within Hymenoptera [21][22].</p>
         </div>
 
         <!-- Results Section -->
         <div class="content-section">
             <h2 class="section-title">Results</h2>
-            <p><strong>HoneyGDB</strong> employs a robust MySQL-based schema accessible via an Apache server. The responsive front-end, built with PHP, JavaScript, and Bootstrap, offers interactive tools like JBrowse2 for genome browsing, BLAST for sequence alignment, and synteny viewers for comparative genomics. Key features include:</p>
+            <p><strong>HoneyGDB</strong> employs a robust MySQL-based schema accessible via an Apache server [23]. The responsive front-end, built with PHP, JavaScript, and Bootstrap, offers interactive tools like JBrowse2 for genome browsing, BLAST for sequence alignment, and synteny viewers for comparative genomics [24]. Key features include:</p>
             <ul>
-                <li><strong>BeeHub:</strong> Centralized portal for genetic and genomic data.</li>
-                <li><strong>MarkerHub:</strong> Database of validated genetic markers for trait mapping.</li>
-                <li><strong>Functional Annotation Search:</strong> Tools for protein family and pathway analysis.</li>
-                <li><strong>BeeCyc:</strong> Metabolic pathway database tailored for honeybees.</li>
-                <li><strong>HomologFinder & OrthologSearch:</strong> Tools for identifying gene conservation across species.</li>
-                <li><strong>BEEBLAST:</strong> Integrated BLAST server with seamless navigation to detailed gene pages.</li>
-                <li><strong>Pangenomes:</strong> Access to non-reference genes and genomic diversity.</li>
+                <li><strong>BeeHub:</strong> Centralized portal for genetic and genomic data [25].</li>
+                <li><strong>MarkerHub:</strong> Database of validated genetic markers for trait mapping [26].</li>
+                <li><strong>Functional Annotation Search:</strong> Tools for protein family and pathway analysis [27].</li>
+                <li><strong>BeeCyc:</strong> Metabolic pathway database tailored for honeybees [28].</li>
+                <li><strong>HomologFinder & OrthologSearch:</strong> Tools for identifying gene conservation across species [29].</li>
+                <li><strong>BEEBLAST:</strong> Integrated BLAST server with seamless navigation to detailed gene pages [30].</li>
+                <li><strong>Pangenomes:</strong> Access to non-reference genes and genomic diversity [31].</li>
             </ul>
             <img src="Figure2.1.svg" alt="HoneyGDB Architecture" class="poster-svg">
         </div>
@@ -228,29 +228,29 @@
         <!-- Discussion Section -->
         <div class="content-section">
             <h2 class="section-title">Discussion</h2>
-            <p><strong>HoneyGDB</strong> significantly enhances honeybee genomics research by providing integrated multi-omics data in an accessible format. It supports studies on species-specific adaptations, gene regulation, and evolutionary biology, overcoming limitations of previous databases. The platform's tools facilitate comprehensive analyses, promoting advancements in understanding honeybee health, Varroa resistance, and responses to environmental stressors.</p>
+            <p><strong>HoneyGDB</strong> significantly enhances honeybee genomics research by providing integrated multi-omics data in an accessible format [32]. It supports studies on species-specific adaptations, gene regulation, and evolutionary biology, overcoming limitations of previous databases [33]. The platform's tools facilitate comprehensive analyses, promoting advancements in understanding honeybee health, Varroa resistance, and responses to environmental stressors [34].</p>
 
             <h5>Impact on Varroa Resistance</h5>
-            <p>The variome and diversity datasets enable identification of genetic variants linked to Varroa mite resistance, aiding in the development of targeted breeding programs. Transcriptomic integration allows exploration of gene expression under stress, supporting studies on colony health.</p>
+            <p>The variome and diversity datasets enable identification of genetic variants linked to Varroa mite resistance, aiding in the development of targeted breeding programs [35]. Transcriptomic integration allows exploration of gene expression under stress, supporting studies on colony health [36].</p>
 
             <h5>Addressing Colony Collapse Disorder (CCD)</h5>
-            <p>By providing access to multi-omics data, HoneyGDB facilitates investigation into molecular pathways involved in CCD, promoting sustainable strategies to mitigate its effects and ensuring pollination services remain robust.</p>
+            <p>By providing access to multi-omics data, HoneyGDB facilitates investigation into molecular pathways involved in CCD, promoting sustainable strategies to mitigate its effects and ensuring pollination services remain robust [37].</p>
         </div>
 
         <!-- Future Directions Section -->
         <div class="content-section">
             <h2 class="section-title">Future Directions</h2>
-            <p><strong>1. Expanding Omics Integration:</strong> Incorporate epigenomic and metabolomic data to deepen understanding of gene regulation and metabolic processes in honeybees.</p>
-            <p><strong>2. Enhancing Population Genomics:</strong> Expand datasets to include diverse honeybee populations, enabling studies on local adaptations and climate resilience.</p>
-            <p><strong>3. Implementing Machine Learning:</strong> Integrate advanced analytics for predictive modeling of gene-trait associations and environmental impacts on honeybee health.</p>
-            <p><strong>4. Fostering Collaboration:</strong> Encourage community contributions and partnerships to enrich HoneyGDB's data and toolset, supporting large-scale research initiatives.</p>
-            <p><strong>5. Expanding to Other Hymenoptera:</strong> Extend the database framework to include ants, wasps, and other Hymenoptera, enhancing comparative genomics and evolutionary studies.</p>
+            <p><strong>1. Expanding Omics Integration:</strong> Incorporate epigenomic and metabolomic data to deepen understanding of gene regulation and metabolic processes in honeybees [38].</p>
+            <p><strong>2. Enhancing Population Genomics:</strong> Expand datasets to include diverse honeybee populations, enabling studies on local adaptations and climate resilience [39].</p>
+            <p><strong>3. Implementing Machine Learning:</strong> Integrate advanced analytics for predictive modeling of gene-trait associations and environmental impacts on honeybee health [40].</p>
+            <p><strong>4. Fostering Collaboration:</strong> Encourage community contributions and partnerships to enrich HoneyGDB's data and toolset, supporting large-scale research initiatives [41].</p>
+            <p><strong>5. Expanding to Other Hymenoptera:</strong> Extend the database framework to include ants, wasps, and other Hymenoptera, enhancing comparative genomics and evolutionary studies [42].</p>
         </div>
 
         <!-- Conclusion Section -->
         <div class="content-section">
             <h2 class="section-title">Conclusion</h2>
-            <p><strong>HoneyGDB</strong> revolutionizes honeybee genomics by integrating diverse omics data into a unified, user-friendly platform. It supports critical research on honeybee health, Varroa resistance, and ecological sustainability, making significant contributions to agriculture and conservation. Future enhancements will further solidify HoneyGDB's role as an indispensable resource for the global honeybee research community.</p>
+            <p><strong>HoneyGDB</strong> revolutionizes honeybee genomics by integrating diverse omics data into a unified, user-friendly platform [43]. It supports critical research on honeybee health, Varroa resistance, and ecological sustainability, making significant contributions to agriculture and conservation [44]. Future enhancements will further solidify HoneyGDB's role as an indispensable resource for the global honeybee research community [45].</p>
         </div>
 
         <!-- References Section -->
@@ -266,7 +266,7 @@
                 <li>Carreck, N., & Williams, I. (2015). The economic value of bees in the UK. <em>Bee World</em>, 79(3), 115-123. <a href="https://doi.org/10.1080/0005772x.1998.11099393">DOI</a></li>
                 <li>Chan, Q. W., et al. (2013). Honey bee protein atlas at organ-level resolution. <em>Genome Res</em>, 23(11), 1951-1960. <a href="https://doi.org/10.1101/gr.155994.113">DOI</a></li>
                 <li>Cingolani, P., et al. (2012). A program for annotating and predicting the effects of single nucleotide polymorphisms, SnpEff: SNPs in the genome of <em>Drosophila melanogaster</em> strain w1118; iso-2; iso-3. <em>Fly (Austin)</em>, 6(2), 80-92. <a href="https://doi.org/10.4161/fly.19695">DOI</a></li>
-                <li>Colbourne, J. K., et al. (2011). The Ecoresponsive Genome of <em>Daphnia pulex</em>. <em>Science</em>, 331(6017), 555-561. <a href="https://doi.org/doi:10.1126/science.1197761">DOI</a></li>
+                <li>Colbourne, J. K., et al. (2011). The Ecoresponsive Genome of <em>Daphnia pulex</em>. <em>Science</em>, 331(6017), 555-561. <a href="https://doi.org/10.1126/science.1197761">DOI</a></li>
                 <li>Collins, F. S., et al. (2003). The Human Genome Project: lessons from large-scale biology. <em>Science</em>, 300(5617), 286-290. <a href="https://doi.org/10.1126/science.1084564">DOI</a></li>
                 <li>Darwin Tree of Life Project, C. (2022). Sequence locally, think globally: The Darwin Tree of Life Project. <em>Proc Natl Acad Sci U S A</em>, 119(4). <a href="https://doi.org/10.1073/pnas.2115642118">DOI</a></li>
                 <li>Ekblom, R., & Galindo, J. (2011). Applications of next generation sequencing in molecular ecology of non-model organisms. <em>Heredity (Edinb)</em>, 107(1), 1-15. <a href="https://doi.org/10.1038/hdy.2010.152">DOI</a></li>
