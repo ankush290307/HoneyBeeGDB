@@ -1,5 +1,6 @@
+USE HGDB;
 -- Define genome names
-SET @genome_names = 'Amel_HAv3_1, AcerK_1_0, Aflo_1_1, Apis_dorsata_1_3, ASM1406632v1, ASM1384124v2, ApisCC1_0, Amel_4_5, ACSNU_2_0';
+SET @genome_names = 'Amel_HAv3_1, AcerK_1_0, Aflo_1_1, Apis_dorsata_1_3, ASM1406632v1, ASM1384124v2, ApisCC1_0, Amel_4_5, ACSNU_2_0, Amel_AMelMel1.1, Acer_AB, Acer_HB-REF, Acer_HN, Acer_Non-ref';
 
 DELIMITER $$
 
