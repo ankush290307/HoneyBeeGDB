@@ -1,0 +1,69 @@
+-- Define genome names
+SET @genome_names = 'Amel_HAv3_1, AcerK_1_0, Aflo_1_1, Apis_dorsata_1_3, ASM1406632v1, ASM1384124v2, ApisCC1_0, Amel_4_5, ACSNU_2_0';
+
+DELIMITER $$
+
+-- Function to create tables for a genome
+CREATE PROCEDURE CreateGenomeTables(IN genome_name VARCHAR(200))
+BEGIN
+    SET @gene_features_table = CONCAT('CREATE TABLE IF NOT EXISTS `', genome_name, '_gene_features` (
+        `HBDBID` VARCHAR(200) NOT NULL,
+        `LG` VARCHAR(200) NOT NULL,
+        `ACCESSION` VARCHAR(200) NOT NULL,
+        `START` INT NOT NULL,
+        `END` INT NOT NULL,
+        `LOCATION` VARCHAR(200) NOT NULL,
+        `STRAND` VARCHAR(10) NOT NULL,
+        `GENE_ID` VARCHAR(200) NOT NULL,
+        PRIMARY KEY (`HBDBID`, `GENE_ID`)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;');
+    PREPARE stmt FROM @gene_features_table;
+    EXECUTE stmt;
+    DEALLOCATE PREPARE stmt;
+
+    SET @functional_annotations_table = CONCAT('CREATE TABLE IF NOT EXISTS `', genome_name, '_functional_annotations` (
+        `GENE_ID` VARCHAR(200) NOT NULL,
+        `DESCRIPTION` VARCHAR(200) NOT NULL,
+        `KEGG_ID` VARCHAR(200) NOT NULL,
+        `KEGG_DESCRIPTION` VARCHAR(200) NOT NULL,
+        `PFAM_ID` VARCHAR(200) NOT NULL,
+        `PFAM_NAME` VARCHAR(200) NOT NULL,
+        `GO_BP` VARCHAR(200) NOT NULL,
+        `GO_CC` VARCHAR(200) NOT NULL,
+        `GO_MF` VARCHAR(200) NOT NULL,
+        PRIMARY KEY (`GENE_ID`),
+        FOREIGN KEY (`GENE_ID`) REFERENCES `', genome_name, '_gene_features` (`GENE_ID`)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;');
+    PREPARE stmt FROM @functional_annotations_table;
+    EXECUTE stmt;
+    DEALLOCATE PREPARE stmt;
+
+    SET @sequences_table = CONCAT('CREATE TABLE IF NOT EXISTS `', genome_name, '_sequences` (
+        `GENE_ID` VARCHAR(200) NOT NULL,
+        `GENE` TEXT NOT NULL,
+        `CDS` TEXT NOT NULL,
+        `PROTEIN` TEXT NOT NULL,
+        PRIMARY KEY (`GENE_ID`),
+        FOREIGN KEY (`GENE_ID`) REFERENCES `', genome_name, '_gene_features` (`GENE_ID`)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;');
+    PREPARE stmt FROM @sequences_table;
+    EXECUTE stmt;
+    DEALLOCATE PREPARE stmt;
+END$$
+
+DELIMITER ;
+
+-- Loop through the genome names and create tables
+SET @names = @genome_names;
+SET @delimiter = ', ';
+SET @pos = 1;
+
+WHILE CHAR_LENGTH(@names) > 0 DO
+    SET @comma_pos = LOCATE(@delimiter, @names);
+    IF @comma_pos = 0 THEN
+        SET @comma_pos = CHAR_LENGTH(@names) + 1;
+    END IF;
+    SET @genome = SUBSTRING(@names, 1, @comma_pos - 1);
+    CALL CreateGenomeTables(@genome);
+    SET @names = IF(@comma_pos = CHAR_LENGTH(@names) + 1, '', SUBSTRING(@names, @comma_pos + CHAR_LENGTH(@delimiter)));
+END WHILE;
